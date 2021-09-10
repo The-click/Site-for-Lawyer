@@ -1,0 +1,659 @@
+/* zero css */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+:root {
+    --headerMainIbg: #3D3D3D;
+    --headerSubMainIbg: #847974;
+    --mainFont: 'Montserrat', sans-serif;
+    --subFont: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--mainFont);
+}
+
+
+/* HEader */
+
+.header {
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.header__about {
+    background: var(--headerMainIbg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header__about__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+    height: 85px;
+}
+
+.header__logo {
+    margin: auto 0;
+}
+
+.header__logo img {
+    height: 70px;
+    width: 170px;
+}
+
+.header__contacts {
+    display: flex;
+    align-items: flex-end;
+    gap: 0 10px;
+}
+
+.header__contact {
+    display: block;
+    color: white;
+    margin: auto;
+}
+
+.header__contacts>img {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+.header__contact__block {
+    margin-left: 20px;
+}
+
+.header__button {
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: var(--headerSubMainIbg);
+    color: white;
+}
+
+.header__societies {
+    display: flex;
+    gap: 0 15px;
+    justify-content: space-evenly;
+}
+
+.header__society {}
+
+.header__society img {
+    width: 30px;
+}
+
+.header__location {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+
+
+/* .header__location>img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg) brightness(103%) contrast(103%);
+} */
+
+.header__subabout {
+    background: rgba(132, 121, 116, 0.5);
+}
+
+.header__subabout__inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__nav {}
+
+.header__items {
+    display: flex;
+    gap: 0 30px;
+}
+
+.header__item {
+    padding: 10px;
+    list-style: none;
+}
+
+.header__link {
+    color: white;
+}
+
+
+/* header */
+
+
+/* about */
+
+.main {}
+
+.about {
+    background: url(https://agg-service.ru/thumb/2/FMVrC7qp5Oes3N8VUfaTpA/3020r/d/54551830_2.jpg) right top/72% 100% no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* push */
+
+.about__push {
+    min-height: calc(100vh - 110px);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 39;
+    background-color: white;
+    max-width: 40%;
+    min-width: 570px;
+    box-shadow: 0px 0px 100px 100px #fff;
+}
+
+.psuh {}
+
+.push__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+
+.push__text {
+    font-size: 2.5rem;
+    line-height: 5.4rem;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.push__get {}
+
+.push form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px 0;
+}
+
+.push__tel {
+    background-color: #3C3A3B;
+    color: #C7BE78;
+    align-self: center;
+    text-align: center;
+    padding: 10px 0px;
+    width: auto;
+    font-size: 1.5rem;
+    width: 200px;
+}
+
+.push__button {
+    align-self: center;
+    background-color: #C7BE78;
+    color: #3C3A3B;
+    padding: 15px 25px;
+    line-height: 2rem;
+    width: 325px;
+    font-size: 1.5rem;
+    white-space: break-spaces;
+    border-radius: 15px;
+    font-weight: 900;
+}
+
+
+/* about */
+
+
+/* Services */
+
+.services {
+    width: 100%;
+    padding: 0 0 60px 0;
+}
+
+.container {}
+
+.services__inner {
+    padding: 10px;
+}
+
+.services__title {}
+
+.title {
+    margin: 50px 0 0 0;
+    text-align: center;
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background-color: gray;
+    margin: 5px 0 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services__group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.services__card {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+.services__link {
+    border: 1px solid gray;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: var(--subFont);
+    color: black;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+
+/* Services */
+
+
+/* Lawyers */
+
+.lawyers {
+    background: url('./assets/img/slider_1.jpg') center/ cover no-repeat;
+    background-attachment: fixed;
+}
+
+.container {}
+
+.lawyers__inner {
+    padding: 20px;
+}
+
+.lawyers__title {
+    color: white;
+}
+
+.title {}
+
+.lawyers__cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 0; */
+    justify-content: center;
+    margin-top: 65px;
+}
+
+.lawyers__card {
+    text-align: center;
+    max-width: 230px;
+    background-color: rgba(187, 187, 187, 0.7);
+    margin-bottom: 100px;
+    padding: 10px 5px 25px 5px;
+    border-radius: 30px;
+    margin: 0 15px 30px 15px;
+}
+
+.lawyers__avatar {
+    max-width: 220px;
+    margin-bottom: 10px;
+    max-height: 220px;
+    border-radius: 30px;
+}
+
+.lawyer__info {
+    font-family: 'Open Sans';
+    color: white;
+}
+
+.lawyer__name {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.lawyer__exper {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.lawyer__exper-val {}
+
+.lawyer__specialty {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+}
+
+.lawyer__speciality__value {}
+
+.lawyer__show {
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Open Sans';
+    cursor: pointer;
+    color: #fff;
+}
+
+
+/* Lawyers */
+
+
+/* Practice */
+
+.practice {}
+
+.container {}
+
+.practice__inner {
+    padding: 10px 15px;
+}
+
+.practice__title {}
+
+.title {}
+
+.practice__main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    margin-top: 60px;
+}
+
+.practice__cards-group {
+    margin-bottom: 30px;
+}
+
+.practice__details {
+    overflow: hidden;
+}
+
+details p {
+    animation: slide .8s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.practice__subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.practice__subtitle::before,
+.practice__subtitle::after {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    background-color: rgba(50, 50, 50, 0.6);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.practice__subtitle::after {
+    left: 0;
+}
+
+.practice__card {
+    margin-bottom: 25px;
+    padding: 5px;
+}
+
+.practice__descript {
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+}
+
+.practice__descript::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    background-color: rgba(187, 187, 187, 0.7);
+}
+
+.practice__card-descript {
+    font-weight: 600;
+}
+
+.practice__result {
+    line-height: 1.5rem;
+}
+
+.practice__card-result {
+    font-weight: 600;
+}
+
+
+/* Practice */
+
+
+/* Price */
+
+.price {
+    padding: 50px 0 50px 0;
+    background: url('https://alkas.lt/wp-content/uploads/2021/03/d1_istock-pattanaphong-khuankaew.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.container {}
+
+.price__inner {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 30px 20px 40px 20px;
+}
+
+.price__title {
+    margin-bottom: 55px;
+    margin-top: 0;
+}
+
+.title {}
+
+.price__main {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto 50px auto;
+    gap: 20px 0;
+}
+
+.price__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    border: 1px solid;
+    padding: 15px 15px;
+    border-radius: 12px;
+}
+
+.price__service {
+    padding-right: 50px;
+    line-height: 1.7rem;
+}
+
+.price__cost {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.price__notice {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.price__notice::before,
+.price__notice::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.price__notice::before {
+    margin-bottom: 20px;
+}
+
+.price__notice::after {
+    margin-top: 20px;
+}
+
+.price__button {
+    padding: 10px 25px 10px 30px;
+    background: var(--headerMainIbg);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0 auto;
+    border-radius: 10px;
+}
+
+.price__button::after {
+    content: url('./assets/img/call_price.svg');
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Price */
+
+
+/* Contacts */
+
+.contacts {
+    padding: 1px 0 30px 0;
+}
+
+.container {}
+
+.contacts__inner {}
+
+.contacts__title {}
+
+.title {}
+
+.contacts__main {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    gap: 0px 50px;
+}
+
+.contacts__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contacts__block img {
+    width: 25px;
+}
+
+.contacst__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 10px;
+    color: black;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+.contacts__tele {}
+
+.contacts__email {}
+
+.contacts__adress {}
+
+.contacts__map {}
+
+.contacts__button {
+    margin-top: 50px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(132, 121, 116, 1);
+    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, var(--headerMainIbg) 50%);
+}
+
+
+/* Contacts */
