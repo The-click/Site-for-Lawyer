@@ -80,12 +80,17 @@ body.lock {
 .header__about__inner {
     display: flex;
     justify-content: space-between;
-    padding: 0 0 10px 0;
-    height: 85px;
+    padding: 5px 0 5px 0;
+    height: 60px;
+    font-size: 0.9rem;
 }
 
 .header__logo {
     margin: auto 0;
+}
+
+.header__logo img {
+    width: 140px;
 }
 
 .header__contact img {
@@ -136,8 +141,8 @@ body.lock {
 
 .header__button {
     width: 150px;
-    height: 30px;
-    margin-bottom: 10px;
+    height: 25px;
+    margin-bottom: 6px;
     background-color: var(--headerSubMainIbg);
     color: white;
     transition: all .3s ease;
@@ -152,14 +157,14 @@ body.lock {
 
 .header__societies {
     display: flex;
-    gap: 0 15px;
-    justify-content: space-evenly;
+    gap: 8px 25px;
+    justify-content: center;
 }
 
 .header__society {}
 
 .header__society img {
-    width: 30px;
+    width: 25px;
 }
 
 .header__location {
@@ -192,7 +197,7 @@ body.lock {
     position: relative;
     position: fixed;
     right: 20px;
-    top: 40px;
+    top: 34px;
 }
 
 .header__burger span {
@@ -260,6 +265,10 @@ body.lock {
     transition: all .8s ease;
 }
 
+.load-page {
+    display: none;
+}
+
 .popup.open {
     opacity: 1;
     visibility: visible;
@@ -283,7 +292,7 @@ body.lock {
     align-items: center;
     padding: 15px 70px;
     box-shadow: 0px 0px 20px 10px white;
-    background: url(https://i1.wp.com/www.advokat35.com/wp-content/uploads/revslider/demo-law-firm/slide-corporate-law-office-2.jpg?fit=1920%2C750) center/cover no-repeat;
+    background: url('./assets/img/popup-order-ibg.webp') center/cover no-repeat;
     transform: perspective(600px) translateY(-100%) rotateX(45deg);
     transition: all .8s ease;
 }
@@ -464,7 +473,7 @@ body.lock {
 
 .about {
     margin-top: -40px;
-    background: url(https://agg-service.ru/thumb/2/FMVrC7qp5Oes3N8VUfaTpA/3020r/d/54551830_2.jpg) 0px -40px/cover no-repeat;
+    background: url('./assets/img/about-ibg.webp') 0px -40px/cover no-repeat;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -478,7 +487,7 @@ body.lock {
 
 /* .about__ibg {
     width: 60%;
-    background: url(https://agg-service.ru/thumb/2/FMVrC7qp5Oes3N8VUfaTpA/3020r/d/54551830_2.jpg) center/cover no-repeat;
+    background: url(https://agg-service.ru/thumb/2/FMVrC7qp5Oes3N8VUfaTpA/3020r/d/54551830_2.webp) center/cover no-repeat;
     background-attachment: local;
 }
 
@@ -528,14 +537,17 @@ body.lock {
     gap: 20px 0;
 }
 
+.push__tel_label {
+    text-align: center;
+}
+
 .push__tel {
     background-color: #3C3A3B;
     color: #C7BE78;
     align-self: center;
-    text-align: center;
-    padding: 10px 0px;
+    padding: 10px 8px;
     width: auto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 200px;
 }
 
@@ -579,6 +591,28 @@ body.lock {
 .services__title {
     margin-top: 70px;
 }
+
+
+/* sending */
+
+form {
+    position: relative;
+}
+
+form._sending::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('./assets/img/loading-11.gif') center/ 100px no-repeat;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100000;
+}
+
+
+/* sending */
 
 .title::after {
     content: '';
@@ -636,7 +670,7 @@ body.lock {
 /* Lawyers */
 
 .lawyers {
-    background: url('./assets/img/slider_1.jpg') center/ cover no-repeat;
+    background: url('./assets/img/slider_1.webp') center/ cover no-repeat;
     background-attachment: fixed;
 }
 
@@ -650,7 +684,55 @@ body.lock {
     color: white;
 }
 
-.title {}
+.popup__lawyers .popup__content {
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 0 25px;
+}
+
+.popup__lawyers-about {
+    display: flex;
+    flex-direction: column;
+    gap: 11px 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.popup__lawyers-line {
+    position: relative;
+    padding-left: 35px;
+}
+
+.popup__lawyers-line::before {
+    content: '';
+    display: inline-block;
+    background: url(./assets/img/checkmark.svg) center/40px no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.popup__lawyers-name {
+    font-weight: 600;
+}
+
+.popup__lawyers-image {
+    align-self: flex-start;
+    margin-top: 25px;
+}
+
+.popup__lawyers-image img {
+    width: 190px;
+}
+
+.popup__lawyers-line {}
+
+.lawyer__speciality__value {}
 
 .lawyers__cards {
     display: flex;
@@ -712,6 +794,7 @@ body.lock {
     color: #fff;
     transition: all .3s ease;
     display: inline-block;
+    background: rgba(90, 90, 90, 1);
 }
 
 .lawyer__show:hover {
@@ -833,7 +916,7 @@ details p {
 
 .price {
     padding: 50px 0 50px 0;
-    background: url('https://alkas.lt/wp-content/uploads/2021/03/d1_istock-pattanaphong-khuankaew.jpg') center/cover no-repeat;
+    background: url('./assets/img/price-ibg.webp') center/cover no-repeat;
     background-attachment: fixed;
 }
 
@@ -983,7 +1066,12 @@ details p {
 
 .contacts__adress {}
 
-.contacts__map {}
+.contacts__map {
+    margin: 0 50px;
+    width: 100%;
+}
+
+.map__iframe {}
 
 .contacts__button {
     margin-top: 50px;
@@ -1028,7 +1116,7 @@ details p {
     .about {
         padding-bottom: 200px;
         overflow: visible;
-        background: url('https://agg-service.ru/thumb/2/FMVrC7qp5Oes3N8VUfaTpA/3020r/d/54551830_2.jpg') 0px 0/100% no-repeat;
+        background: url('./assets/img/about-ibg.webp') 0px 0/100% no-repeat;
         background-attachment: fixed;
     }
     .about__main {
@@ -1076,9 +1164,7 @@ details p {
     }
     .contacts__map {
         margin: 0 auto;
-    }
-    .contacts__map img {
-        width: 100%;
+        width: 95%;
     }
     .contacst__info:not(.contacts__societies) img {
         filter: invert(1);
@@ -1105,7 +1191,7 @@ details p {
     .popup__content {
         min-width: 300px;
         padding: 15px 40px;
-        background: url(https://i1.wp.com/www.advokat35.com/wp-content/uploads/revslider/demo-law-firm/slide-corporate-law-office-2.jpg?fit=1920%2C750) left/cover no-repeat;
+        background: url('./assets/img/popup-order-ibg.webp') left/cover no-repeat;
     }
     .popup__close {
         right: 3px;
@@ -1129,6 +1215,7 @@ details p {
         justify-content: space-around;
         align-items: center;
         padding: 0;
+        height: 70px;
     }
     .header__contacts {
         margin-right: 50px;
@@ -1166,6 +1253,21 @@ details p {
     }
     /* burger Active */
     /* header */
+    .popup__lawyers-name {
+        text-align: center;
+        width: 100%;
+    }
+    .popup__lawyers-image {
+        align-self: flex-start;
+        margin-top: 25px;
+        margin: 10px auto 0 auto;
+    }
+    .popup__lawyers .popup__content {
+        flex-direction: column;
+        gap: 20px 0;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media(max-width:500px) {
@@ -1223,6 +1325,29 @@ details p {
         line-height: 1.7rem;
     }
     /* price */
+    .popup__lawyers-line {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        padding: 0 0 4px 0;
+    }
+    .popup__lawyers-line::before {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 0);
+        bottom: 0px;
+        background: aqua;
+    }
+    .popup__lawyers .popup__content {
+        padding: 15px 5px;
+    }
 }
 
 @media(max-width:425px) {

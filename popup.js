@@ -24,6 +24,7 @@ if (closePopupIcon.length > 0) {
 }
 
 function openPopup(popup) {
+
     if (popup && unlock) {
         const popupActive = document.querySelector('.popup.active');
         if (popupActive) {
@@ -31,6 +32,7 @@ function openPopup(popup) {
         } else {
             bodyLock()
         }
+
         popup.classList.add('open');
         popup.addEventListener('click', e => {
             if (!e.target.closest('.popup__content')) {
@@ -41,6 +43,7 @@ function openPopup(popup) {
 }
 
 function closePopup(popup, doUnlock = true) {
+
     if (unlock) {
         popup.classList.remove('open');
         if (doUnlock) {
@@ -60,6 +63,7 @@ function bodyLock() {
         }
     }
     body.classList.add('lock');
+
 
     body.style.marginRight = lockPaddingValue;
 

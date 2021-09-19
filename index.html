@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адвокаты</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -41,18 +43,21 @@
                         </div>
                         <div class="header__burger"><span></span></div>
                         <button class="header__order-call popup-link" data-popupName='popup-order'>Заказать звонок <img src="./assets/img/call-centre-outline.svg" alt="call"></button>
-                        <div class="order-call__popup popup" id="popup-order">
+                        <div class="order-call__popup popup load-page" id="popup-order">
                             <div class="popup__body">
                                 <div class="popup__content">
                                     <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>
                                     <p class="popup__title">Получить консультанцию</p>
-                                    <form class="popup__form" action="#" method="POST">
+                                    <form class="popup__form" action="./sendmail.php" method="POST" data-form-send>
                                         <p class="popup__line"><input class="popup__input" type="text" name="popup__name" id="popupName" placeholder="Имя"></p>
-                                        <p class="popup__line"><input class="popup__input" type="tel" id="popupNumber" name="popup__tel" pattern="+7([0-9]{3})[0-9]{3}-([0-9]{2})-([0-9]{2})" required value="+7(xxx)xxx-xx-xx"></p>
-                                        <p class="popup__line">
-                                            <details class="popup__details">
-                                                <summary>Описать проблему</summary><textarea class="popup__area" name="popupArea"></textarea></details>
-                                        </p>
+                                        <p class="popup__line"><input class="popup__input" type="tel" id="popupNumber" name="phone" data-tel-input required placeholder="Номер телефона"></p>
+
+                                        <details class="popup__details">
+                                            <summary>Описать проблему</summary>
+                                            <textarea class="popup__area" name="popupArea"></textarea>
+                                        </details>
+
+
                                         <p class="popup__line"><input class="popup__submit" type="submit" value="Заказать звонок"></p>
                                     </form>
                                 </div>
@@ -83,7 +88,7 @@
                                 <a href="#" class="header__subabout__society"><img src="./assets/img/vk-icon.svg" alt="vk"></a>
                                 <a href="#" class="header__subabout__society"><img src="./assets/img/whatsapp__icon.png" alt="whatsApp"></a>
                             </div>
-                            <a href="tel:8999999999" class="header__subabout__tel"><img src="./assets/img/call__icon.png" alt=""> +7(999)999-99-99 </a>
+                            <a href="tel:+7999999999" class="header__subabout__tel"><img src="./assets/img/call__icon.png" alt="call"> +7(999)999-99-99 </a>
                         </div>
                     </div>
                 </div>
@@ -98,9 +103,10 @@
                             <p class="push__text">
                                 Гарантируем качество <br> оказываемых услуг!
                             </p>
-                            <form action="mailto:ramzanmal04@mail.ru" enctype="text/plain" method="POST">
-                                <input class="push__tel" type="tel" id="phone" name="phone" pattern="+7([0-9]{3})[0-9]{3}-([0-9]{2})-([0-9]{2})" required value="+7(xxx)xxx-xx-xx">
-                                <input class="push__button" type="submit" class="push__get" value="Получить юридическую консультацию по телефону">
+                            <form action="mailto:ramzanmal04@mail.ru" enctype="text/plain" method="POST" data-form-send>
+                                <label class="push__tel_label">
+                                <input class="push__tel" type="tel" id="phone" name="phone" data-tel-input required placeholder="Номер телефона"> </label>
+                                <input class="push__button push__get" type="submit" value="Получить юридическую консультацию по телефону">
                             </form>
                         </div>
 
@@ -141,40 +147,65 @@
                             Об адвокатах
                         </h3>
                         <div class="lawyers__cards">
-                            <div class="lawyers__card">
-                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.png" alt="фото адвоката">
-                                <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
-                                <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
-                                <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
-                                <buttton class="lawyer__show">Подробнее</buttton>
+                            <div class="popup popup__lawyers" id="popup-lawyers">
+                                <div class="popup__body">
+                                    <div class="popup__content">
+                                        <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>
+                                        <div class="popup__lawyers-image">
+                                            <img src="./assets/img/avatar__lawyer.webp" alt="avatar">
+                                        </div>
+                                        <div class="popup__lawyers-about">
+                                            <p class="popup__lawyers-name">Иванов Иван Иванович</p>
+                                            <p class="popup__lawyers-line">Стаж: <span class="">30 лет</span></p>
+                                            <p class="popup__lawyers-line">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                            <p class="popup__lawyers-line">Опыт адвокатской деятельности — 16 лет.</p>
+                                            <p class="popup__lawyers-line">Работал в МВД (15 лет), знание тонкостей в уголовных делах.</p>
+                                            <p class="popup__lawyers-line">Специализация — уголовные, семейные, арбитражные, гражданские дела, банкротство.</p>
+                                            <p class="popup__lawyers-line">Также богатый опыт — административные, наследственные, земельные, налоговые, жилищные, строительные, трудовые и другие споры.</p>
+                                            <p class="popup__lawyers-line">При изучении дела — в 95% случаев можно сказать предварительный результат.</p>
+                                            <p class="popup__lawyers-line">Представление интересов и защита прав клиентов — во всех судебных инстанциях РФ.</p>
+                                            <p class="popup__lawyers-line">Личные и профессиональные качества — честность, порядочность и максимальные усилия для решения проблемы каждого клиента.</p>
+                                            <p class="popup__lawyers-line">Номер в реестре адвокатов — 05/484
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="lawyers__card">
-                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.png" alt="фото адвоката">
+                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
                                 <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
                                 <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
                                 <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
-                                <buttton class="lawyer__show">Подробнее</buttton>
+                                <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                            </div>
+
+                            <div class="lawyers__card">
+                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
                             </div>
                             <div class="lawyers__card">
-                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.png" alt="фото адвоката">
+                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
                                 <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
                                 <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
                                 <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
-                                <buttton class="lawyer__show">Подробнее</buttton>
+                                <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
                             </div>
                             <div class="lawyers__card">
-                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.png" alt="фото адвоката">
+                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
                                 <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
                                 <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
                                 <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
-                                <buttton class="lawyer__show">Подробнее</buttton>
+                                <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
                             </div>
                             <div class="lawyers__card">
-                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.png" alt="фото адвоката">
+                                <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
                                 <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
                                 <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
                                 <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
-                                <buttton class="lawyer__show">Подробнее</buttton>
+                                <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
                             </div>
                         </div>
                     </div>
@@ -435,7 +466,7 @@
                                 <button class="contacts__button popup-link" data-popupName='popup-order'>Заказать звонок</button>
                             </div>
                             <div class="contacts__map">
-                                <img src="./assets/img/Map (1).png" alt="map">
+                                <iframe class="map__iframe load-page" title="Map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A607765b6ab7e655e6afbb9a851f3c3b64019618cab44284c831a2cc4f661934f&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
                             </div>
                         </div>
 
