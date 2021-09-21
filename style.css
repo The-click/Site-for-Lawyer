@@ -562,6 +562,7 @@ body.lock {
     white-space: break-spaces;
     border-radius: 15px;
     font-weight: 900;
+    cursor: pointer;
 }
 
 
@@ -662,6 +663,166 @@ form._sending::before {
     background-color: black;
     color: white;
 }
+
+
+/* Services Popup */
+
+.popup {}
+
+.popup__services {}
+
+.popup__body {}
+
+.popup__services .popup__content {
+    background: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.popup-serv__title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.popup-serv__property {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    /* text-align: center; */
+}
+
+.popup-property__title {
+    color: blue;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+
+.popup-property__blocks {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.popup-property__block {
+    position: relative;
+    padding: 10px 0;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-property__block::before {
+    content: '';
+    width: 105%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-property-line {
+    position: relative;
+}
+
+.popup-property-line_st {
+    /* position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.property__block_line {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.property__block_line .popup-property-line {
+    padding-left: 15px;
+}
+
+.property__block_line .popup-property-line::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #000;
+    display: inline-block;
+    border-radius: 18%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.popup-serv__lawyers {
+    margin-top: 20px;
+}
+
+.popup-serv__lawyers__title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.popup-serv__lawyers__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.popup-serv__lawyers__block .lawyers__card {
+    text-align: center;
+    max-width: 180px;
+    padding: 7px 5px 15px 5px;
+    margin: 0 10px 25px 10px;
+}
+
+.popup-serv__lawyers__block .lawyers__avatar {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.popup-serv__lawyers__block .lawyer__specialty {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.4rem;
+}
+
+
+/* .lawyers__card {}
+
+.popup-serv__lawyer {}
+
+.lawyers__avatar {}
+
+.lawyer__info {}
+
+.lawyer__name {}
+
+.lawyer__exper {}
+
+.lawyer__exper-val {}
+
+.lawyer__specialty {}
+
+.lawyer__speciality__value {}
+
+.popup-link {}
+
+.lawyer__show {} */
 
 
 /* Services */
@@ -1268,6 +1429,62 @@ details p {
         justify-content: center;
         align-items: center;
     }
+    /* popup Services */
+    .popup-serv__property {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+    }
+    .popup-property__title {
+        color: blue;
+        text-decoration: underline;
+        margin-top: 15px;
+    }
+    .popup-property__blocks {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .popup-property__block {
+        position: relative;
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .popup-property__block::before {
+        display: none;
+    }
+    .popup-property-line {
+        position: relative;
+    }
+    .popup-property-line_st {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        font-size: 0.9rem;
+    }
+    .property__block_line {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .property__block_line .popup-property-line {
+        padding-left: 15px;
+        text-align: left;
+    }
+    /* .property__block_line .popup-property-line::before {
+        display: none;
+    } */
 }
 
 @media(max-width:500px) {

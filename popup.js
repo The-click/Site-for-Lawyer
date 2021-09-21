@@ -8,6 +8,7 @@ const timeout = 800;
 
 if (popupLink.length > 0) {
     popupLink.forEach(i => i.addEventListener('click', e => {
+        e.preventDefault();
         const popupName = i.getAttribute('data-popupName');
         openPopup(document.querySelector('#' + popupName))
 
