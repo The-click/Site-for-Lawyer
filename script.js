@@ -1,4 +1,5 @@
 // Slide details practice
+"use strict"
 
 const detailsPractice = document.querySelectorAll('.practice__details');
 const burgerMenu = document.querySelector('.header__burger');
@@ -139,3 +140,69 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 })
+
+
+// Slider function
+
+
+window.onload = function() {
+    // load page Pseudo Lazy effects
+    document.querySelectorAll('.load-page').forEach(i => i.classList.remove('load-page'))
+        // console.log(document.querySelector('#popup-civil .popup-serv__wrap'));
+    function Slider(obj) {
+        this.slides = obj.querySelectorAll('.popup-serv__block');
+        this.paginations = obj.querySelectorAll('.serv__slide_pag');
+        let blockonSlide = Math.floor(((this.slides).length + 1) / 2);
+        if (document.querySelector('body').clientWidth <= 500) {
+            blockonSlide = this.slides.length;
+        } else {
+            this.paginations.forEach((item, index) => {
+
+                if (index >= blockonSlide) item.classList.add('hide');
+            })
+        };
+        this.countSlide = blockonSlide;
+        let currentSlide = 0;
+        this.paginations[currentSlide].classList.add('check');
+        this.btnNext = obj.querySelector('.popup-serv__block_btn.go');
+        this.btnPrev = obj.querySelector('.popup-serv__block_btn.back');
+
+        this.next = function() {
+            currentSlide = +(currentSlide) + 1;
+            if (currentSlide >= this.countSlide) currentSlide = 0;
+            this.changeSlide.call(this);
+        };
+        this.prev = function(e) {
+            currentSlide -= 1;
+            if (currentSlide < 0) currentSlide = this.countSlide - 1;
+            this.changeSlide.call(this);
+        }
+        this.changeSlide = function() {
+            this.widthOneSlide = this.slides[0].getBoundingClientRect().width;
+            let distPage = 5;
+            if (blockonSlide !== this.slides.length) {
+                this.widthOneSlide *= 2;
+                distPage *= 2;
+            };
+            obj.querySelector('.check').classList.remove('check');
+            this.paginations[currentSlide].classList.add('check');
+            this.slides[0].style.marginLeft = `-${(currentSlide * this.widthOneSlide) + (currentSlide * distPage)}px`;
+        }
+        this.handlerChangeSlide = function(index) {
+            currentSlide = index;
+            this.changeSlide.call(this);
+
+
+        }
+
+
+        this.paginations.forEach((item, index) => item.addEventListener('click', this.handlerChangeSlide.bind(this, index)))
+        this.btnNext.addEventListener('click', this.next.bind(this));
+        this.btnPrev.addEventListener('click', this.prev.bind(this));
+
+
+    }
+
+    new Slider(document.querySelector('#popup-civil .popup-serv__wrap'));
+
+}

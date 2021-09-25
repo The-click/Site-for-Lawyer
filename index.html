@@ -126,7 +126,7 @@
                         <div class="services__group">
                             <div class="services__card">
                                 <a href="#popup" class="services__link popup-link" data-popupName="popup-criminal">Уголовные дела</a>
-                                <div class="popup popup__services" id="popup-criminal">
+                                <div class="popup popup__services load-page" id="popup-criminal">
                                     <div class="popup__body">
                                         <div class="popup__content">
                                             <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>
@@ -258,13 +258,364 @@
                                 </div>
                             </div>
                             <div class="services__card">
-                                <a href="#" class="services__link">Гражданские дела</a>
+                                <a href="#popup" class="services__link popup-link" data-popupName="popup-civil">Гражданские дела</a>
+                                <div class="popup popup__services load-page" id="popup-civil">
+                                    <div class="popup__body">
+                                        <div class="popup__content">
+                                            <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>
+                                            <h3 class="popup-serv__title">Гражданские дела</h3>
+                                            <!-- <div class="popup-serv__container"> -->
+                                            <div class="popup-serv__wrap">
+                                                <button class="popup-serv__block_btn back">&lt;</button>
+                                                <button class="popup-serv__block_btn go">&gt;</button>
+
+                                                <div class="popup-serv__labels">
+                                                    <span class="serv__slide_pag"></span>
+                                                    <span class="serv__slide_pag"></span>
+                                                    <span class="serv__slide_pag"></span>
+                                                    <span class="serv__slide_pag"></span>
+                                                    <span class="serv__slide_pag"></span>
+                                                    <span class="serv__slide_pag"></span>
+                                                    <span class="serv__slide_pag"></span>
+                                                </div>
+
+
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Семейные дела</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>защита интересов при разводе (даже без Вашего участия)</li>
+                                                            <li>защита Ваших прав при разделе имущества</li>
+                                                            <li>взыскание алиментов в Вашу пользу</li>
+                                                            <li>защита Ваших прав при назначении алиментов (для отцов)</li>
+                                                            <li>оспаривание при назначении неправильной суммы алиментов</li>
+                                                            <li>определение порядка общения с ребенком через суд</li>
+                                                            <li>оспаривание права на общение с ребенком</li>
+                                                            <li>лишение родительских прав</li>
+                                                            <li>назначение опекунства</li>
+                                                            <li>и др. ситуации.</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Споры по наследству</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>раздел наследства</li>
+                                                            <li>принятие наследства</li>
+                                                            <li>признание права на наследство</li>
+                                                            <li>представление интересов наследника или претендента в суде</li>
+                                                            <li>оспаривание наследства</li>
+                                                            <li>и др.</li>
+
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Жилищные споры</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>признание права собственности через суд</li>
+                                                            <li>различные споры с ЖСК, ТСЖ</li>
+                                                            <li>юрист по проблемам с ЖКХ и другими коммунальными службами</li>
+                                                            <li>помощь по взысканию ущерба при затоплении, протечке, утечке</li>
+                                                            <li>помощь юриста в СПб в спорах с застройщиками</li>
+                                                            <li>защита прав и интересов в суде при спорах с ком. службами</li>
+                                                            <li>и др.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Защита прав потребителей — 10 000 руб</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>подготовка и направление претензий</li>
+                                                            <li>возврат товара ненадлежащего качества</li>
+                                                            <li>возврат средств за услугу или товар ненадлежащего качества</li>
+                                                            <li>невыполнение условий гарантии</li>
+                                                            <li>взыскание компенсации</li>
+                                                            <li>внесудебное урегулирование споров</li>
+                                                            <li>востребование экспертиз и пр. проверок</li>
+                                                            <li>обращение жалоб в Роспотребнадзор др. органы</li>
+                                                            <li>защита прав и интересов в суде</li>
+                                                            <li>обжалование решения суда</li>
+                                                            <li>и др.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Трудовые споры</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>получение компенсации за неиспользованный отпуск</li>
+                                                            <li>взыскание с работодателя компенсации за незаконное увольнение</li>
+                                                            <li>получение задолженностей по невыплате заработной платы, взыскивание компенсации</li>
+                                                            <li>восстановление на работе</li>
+                                                            <li>возмещение ущерба из-за причинения вреда здоровью на рабочем производстве</li>
+                                                            <li>и др.</li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Налоговые споры</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>представление интересов клиента в ФНС</li>
+                                                            <li>юридическая помощь по вопросам налоговой оптимизации</li>
+                                                            <li>обжалование действий ФНС в вышестоящих инстанциях</li>
+                                                            <li>представление интересов и защита прав клиента в судебных инстанциях</li>
+                                                            <li>подготовка документов на требования ФНС при проводимых проверках и др.</li>
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Земельные споры</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>помощь юриста при заключении земельных сделок «под ключ»</li>
+                                                            <li>представительство интересов в досудебном порядке, проведение переговоров, составление договоров купли-продажи, дарения, аренды, субаренды</li>
+                                                            <li>защита прав клиента в судебных инстанциях</li>
+                                                            <li>признание/ оспаривание права собственности на землю, установление границ участка</li>
+                                                            <li>снижение кадастровой стоимости и др.</li>
+
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- </div> -->
+                                            <div class="popup-serv__lawyers">
+                                                <div class="popup-serv__lawyers__title">Адвокаты</div>
+
+                                                <div class="popup-serv__lawyers__block" id="lawyers-civil">
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
                             </div>
                             <div class="services__card">
-                                <a href="#" class="services__link">Арбитражные дела</a>
+                                <a href="#popup" class="services__link popup-link" data-popupName="popup-arbitr">Арбитражные дела</a>
+                                <div class="popup popup__services load-page" id="popup-arbitr">
+                                    <div class="popup__body">
+                                        <div class="popup__content">
+                                            <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>
+                                            <h3 class="popup-serv__title">Арбитражные дела</h3>
+                                            <!-- <div class="popup-serv__container"> -->
+                                            <div class="popup-serv__wrap  popup-serv__wrap_column">
+
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Юридические услуги (юридическое сопровождение) для бизнеса
+                                                    </div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>предотвращение мошенничества со стороны партнеров или клиентов</li>
+                                                            <li>представление интересов бизнеса в налоговых и иных органах</li>
+                                                            <li>консультации по открытию/ закрытию/ покупке/ продаже бизнеса</li>
+                                                            <li>юридическое сопровождение сделок</li>
+                                                            <li>защита прав собственности</li>
+                                                            <li>защита интеллектуальных прав</li>
+                                                            <li>защита бизнеса- антирейдерство</li>
+                                                            <li>защита прав в третейском суде</li>
+                                                            <li>снятие судимости с руководителя или владельца бизнеса</li>
+                                                            <li>уголовная защита по экономическим и налоговым преступлениям и др.</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Адвокат в арбитражных спорах</div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>представление интересов бизнеса в гос. органах</li>
+                                                            <li>защита прав в судебных инстанциях</li>
+                                                            <li>взыскание убытков</li>
+                                                            <li>получение неустойки</li>
+                                                            <li>взыскание долгов по договорам</li>
+                                                            <li>защита деловой, экономической и иной репутации</li>
+                                                            <li>оспаривание действий гос. органов</li>
+                                                            <li>и другие ситуации.</li>
+
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- </div> -->
+                                            <div class="popup-serv__lawyers">
+                                                <div class="popup-serv__lawyers__title">Адвокаты</div>
+
+                                                <div class="popup-serv__lawyers__block" id="lawyers-civil">
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
                             <div class="services__card">
-                                <a href="#" class="services__link">Административные дела</a>
+                                <a href="#poup" class="services__link popup-link" data-popupName="popup-administrative">Административные дела</a>
+                                <div class="popup popup__services load-page" id="popup-administrative">
+                                    <div class="popup__body">
+                                        <div class="popup__content">
+                                            <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>
+                                            <h3 class="popup-serv__title">Административные дела</h3>
+                                            <!-- <div class="popup-serv__container"> -->
+                                            <div class="popup-serv__wrap  popup-serv__wrap_column">
+
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Защита при ДТП
+                                                    </div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>виновность/ невиновность в ДТП</li>
+                                                            <li>лишение водительских прав</li>
+                                                            <li>отмена штрафов за нарушение ПДД</li>
+                                                            <li>юридическое сопровождение во избежание фальсификации доказательств, свидетельств по ДТП</li>
+                                                            <li>представление интересов и грамотная защита прав в административном или уголовном суде и др.</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Защита при других нарушениях КоАП РФ
+                                                    </div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>представление интересов клиента в переговорах с представителями гос. органов</li>
+                                                            <li>обжалование действий должностных лиц</li>
+                                                            <li>защита прав в судебных и инстанциях</li>
+                                                            <li>обжалование постановления/ решения суда по административному делу клиента</li>
+                                                            <li>оформление жалоб, ходатайств, запросов и др.</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                                <div class="popup-serv__block">
+                                                    <div class="popup-serv__subtitle">Защита при других нарушениях КоАП РФ
+                                                    </div>
+                                                    <div class="popup-serv__desrip">
+                                                        <!-- <img src="" alt="" class=""> -->
+                                                        <ul class="popup-serv__item">
+                                                            <li>таможенного законодательства</li>
+                                                            <li>в сфере торговли</li>
+                                                            <li>санитарно-эпидемиологических норм</li>
+                                                            <li>норм пожарной безопасности</li>
+                                                            <li>строительных норм</li>
+                                                            <li>в области военного права</li>
+                                                            <li>и других сферах административного законодательства</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- </div> -->
+                                            <div class="popup-serv__lawyers">
+                                                <div class="popup-serv__lawyers__title">Адвокаты</div>
+
+                                                <div class="popup-serv__lawyers__block" id="lawyers-civil">
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                    <div class="lawyers__card popup-serv__lawyer">
+                                                        <img class="lawyers__avatar" src="./assets/img/avatar__lawyer.webp" alt="фото адвоката">
+                                                        <p class="lawyer__info lawyer__name">Иванов Иван Иванович</p>
+                                                        <p class="lawyer__info lawyer__exper">Стаж: <span class="lawyer__exper-val">30 лет</span></p>
+                                                        <p class="lawyer__info lawyer__specialty">Специализация: <span class="lawyer__speciality__value">уголовные, гражданские, административные, арбитражные дела</span></p>
+                                                        <button class="popup-link lawyer__show" data-popupName="popup-lawyers">Подробнее</button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -278,7 +629,7 @@
                     Об адвокатах
                 </h3>
                 <div class="lawyers__cards">
-                    <div class="popup popup__lawyers" id="popup-lawyers">
+                    <div class="popup popup__lawyers load-page" id="popup-lawyers">
                         <div class="popup__body">
                             <div class="popup__content">
                                 <button class="popup__close close-popup"><img src="./assets/img/popup-close.svg" alt="close"></button>

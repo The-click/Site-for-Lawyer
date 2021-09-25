@@ -61,7 +61,7 @@ body.lock {
     display: flex;
     color: white;
     flex-direction: column;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10;
 }
@@ -667,12 +667,6 @@ form._sending::before {
 
 /* Services Popup */
 
-.popup {}
-
-.popup__services {}
-
-.popup__body {}
-
 .popup__services .popup__content {
     background: rgba(255, 255, 255, 1);
     color: black;
@@ -681,8 +675,12 @@ form._sending::before {
 .popup-serv__title {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
 }
 
 .popup-serv__property {
@@ -731,13 +729,6 @@ form._sending::before {
 }
 
 .popup-property-line_st {
-    /* position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: -5px;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     opacity: 0.9;
     font-size: 1rem;
 }
@@ -771,10 +762,15 @@ form._sending::before {
 }
 
 .popup-serv__lawyers__title {
-    font-weight: bold;
-    font-size: 1.3rem;
     text-align: center;
-    margin-bottom: 15px;
+    margin: 20px auto 20px auto;
+    font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 132px;
 }
 
 .popup-serv__lawyers__block {
@@ -802,27 +798,137 @@ form._sending::before {
 }
 
 
-/* .lawyers__card {}
+/* Popup civil services */
 
-.popup-serv__lawyer {}
+.popup-serv__wrap {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+    position: relative;
+    width: 1005px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 10px 5px;
+    background: url('./assets/img/serv-ibg.webp') center/cover no-repeat;
+}
 
-.lawyers__avatar {}
+.popup-serv__block_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.7rem;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 7px;
+    opacity: 0.6;
+    z-index: 100;
+}
 
-.lawyer__info {}
+.popup-serv__block_btn.go {
+    right: 0px;
+}
 
-.lawyer__name {}
+.popup-serv__block_btn.back {
+    left: 0px;
+}
 
-.lawyer__exper {}
 
-.lawyer__exper-val {}
+/* .serv__input {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
 
-.lawyer__specialty {}
+.serv__slide_pag {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: rgba(250, 250, 250, 0.8);
+    border: 0.5px solid black;
+    border-radius: 50%;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
 
-.lawyer__speciality__value {}
+.serv__slide_pag.hide {
+    display: none;
+}
 
-.popup-link {}
+.serv__slide_pag.check {
+    transform: scale(1.40);
+    background-color: rgba(100, 100, 255, 1);
+    margin: 0 4px;
+    border: none;
+}
 
-.lawyer__show {} */
+.popup-serv__labels {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 2px;
+}
+
+.popup-serv__block {
+    min-width: 460px;
+    width: 460px;
+    position: relative;
+    transition: all 0.5s ease;
+    border-radius: 40px;
+    padding: 20px;
+    /* text-align: center; */
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.popup-serv__subtitle {
+    color: blue;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 94%;
+    margin: 0 auto;
+}
+
+.popup-serv__desrip {}
+
+.popup-serv__item {
+    padding-left: 10px;
+}
+
+.popup-serv__item li {
+    padding-left: 10px;
+    position: relative;
+    margin: 5px 0;
+}
+
+.popup-serv__item li:before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 40%;
+    background-color: black;
+}
+
+
+/* popup arbitr serices */
+
+.popup-serv__wrap_column {
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 
 /* Services */
@@ -1259,6 +1365,11 @@ details p {
 
 .contact__society img {
     width: 40px;
+    transition: all 0.3s ease;
+}
+
+.contact__society:hover img {
+    transform: scale(1.15);
 }
 
 
@@ -1337,6 +1448,15 @@ details p {
     .contacts__button {
         margin: 0 auto;
         border: 1px solid #000;
+    }
+    /* popup services civil */
+    .popup-serv__wrap {
+        width: 705px;
+    }
+    .popup-serv__block {
+        min-width: 310px;
+        width: 310px;
+        font-size: 1rem;
     }
 }
 
@@ -1482,9 +1602,31 @@ details p {
         padding-left: 15px;
         text-align: left;
     }
+    /* popup services civil */
+    .popup-serv__block {
+        min-width: 270px;
+        width: 270px;
+        font-size: 1rem;
+        padding: 20px 10px;
+    }
+    .popup-serv__wrap {
+        width: 585px;
+    }
     /* .property__block_line .popup-property-line::before {
         display: none;
     } */
+}
+
+@media(max-width:600px) {
+    .popup-serv__block {
+        min-width: 225px;
+        width: 225px;
+        font-size: 0.8rem;
+        padding: 20px 5px;
+    }
+    .popup-serv__wrap {
+        width: 476px;
+    }
 }
 
 @media(max-width:500px) {
@@ -1565,6 +1707,19 @@ details p {
     .popup__lawyers .popup__content {
         padding: 15px 5px;
     }
+    /* popup serv civil */
+    .popup-serv__wrap {
+        width: 100%;
+    }
+    .popup-serv__block {
+        min-width: 100%;
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 20px 0px 30px 0px;
+    }
+    .popup-serv__block_btn {
+        padding: 4px 5px;
+    }
 }
 
 @media(max-width:425px) {
@@ -1597,12 +1752,19 @@ details p {
     .header__order-call {
         padding: 8px 6px;
     }
+    .serv__slide_pag {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 @media(max-width:375px) {
     .popup__content {
         min-width: 265px;
         padding: 15px 20px;
+    }
+    .services .popup__content {
+        padding: 35px 20px;
     }
     .popup__title {
         font-size: 1.4rem;
